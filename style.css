@@ -1,22 +1,19 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .container h1{
     margin-top: 20px;
     font-size: large;
 }
-#container_1{
-    margin-top: 70px;
-}
-
-#container_2{
-    margin-top: 20px;
-}
-
 .container a{
     text-decoration: none;
+}
+#container_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px; 
+}
+#container_2{
+    margin-top: 20px;
 }
 h1, p{
     font-size: 16px;
@@ -24,22 +21,43 @@ h1, p{
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
 }
 #avatar {
     width: 100px; 
     height: 100px; 
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
-.box{
+.box {
     position: relative;
     padding: 1px;
     background-color: rgba(16, 14, 17, 0.7);
     border-radius: 5px;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
     margin-bottom: 18px;
+}
+
+.box a {
+    position: absolute; /* 絕對定位於父系 */
+    top: 0; 
+    left: 0; 
+    width: 100%; /* 寬度填滿父系 */
+    height: 100%; /* 高度填滿父系 */
+    text-decoration: none; /* 移除下線 */
+}
+
+.box p {
+    display: flex;
+    justify-content: center;    
+    text-align: center; 
+    color: white;
+}
+
+.box i {
+    position: absolute; 
+    margin: 3px 12px; 
 }
 
 .arrow-down { /* arrow */
@@ -50,7 +68,7 @@ h1, p{
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 13px solid #000;
+    border-top: 13px solid rgba(16, 14, 17, 0.65);
     transition: transform 0.3s; 
     
 }
@@ -65,17 +83,6 @@ h1, p{
     transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3); 
 }
 
-.box i {
-    margin: 4px 10px;
-    position: absolute;
-}
-
-.box p {
-    display: flex;
-    justify-content: center;    
-    text-align: center; 
-    color: white;
-}
 #dropdown{
     cursor: pointer;
 }
