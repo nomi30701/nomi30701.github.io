@@ -5,17 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://kit.fontawesome.com/092df6ef38.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Nomi30701 Home Page</h1>
-
-    <div>
-        <p>Test tensorflow is available</p>
-        <button onclick="tensorflow_random_btn()">Click me!</button>
-        <p id="tensorflow_test">predict: </p>
+    <div class="container" id="container_1">
+        <img src="https://avatars.githubusercontent.com/u/84728127?u=ca741de4f6b396ee91f7f13930bd38f93bc880af&v=4" id="avatar">
+        <h1>nomi30701 home Page</h1>
     </div>
+
+    <div class="container" id="container_2">
+        <a href="https://github.com/nomi30701">
+            <div class="box">
+                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;" class="icon"></i>
+                <p>✨Github</p>
+            </div>
+        </a>
+        
+        <div>
+            <div class="box" id="dropdown" onclick="dropdown()">
+                <i class="fa-solid fa-folder fa-3x" style="color: #ffffff;"></i>
+                <p>My Project</p>
+                <div class="arrow-down"></div>
+            </div>
     
+            <div class="dropdown_menu">
+                <a href="https://github.com/nomi30701">
+                    <div class="box">
+                        <p>Under water image color correction and yolo detect</p>
+                    </div>
+                </a>
+    
+                <a href="https://github.com/nomi30701/TensorflowJS_test">
+                    <div class="box">
+                        <p>Test tensorflow</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        
+        <a href="https://github.com/nomi30701">
+            <div class="box">
+                <i class="fa-solid fa-address-card fa-3x" style="color: #ffffff;"></i>
+                <p>🎈About me</p>
+            </div>
+        </a>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
