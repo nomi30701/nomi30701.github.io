@@ -7,12 +7,12 @@ function dropdown() {
 }
 
 // box animation
-const boxes = document.querySelectorAll('.box');
-function applyFadeInAnimation() {
-    for (var i = 0; i < boxes.length; i++) {
-        var delay = i * 50;
-        boxes[i].style.animation = `fadeIn 1s ease forwards ${delay}ms`;
-    }
-}
+// const boxes = document.querySelectorAll('.box');
+// function applyFadeInAnimation() {
+//     for (var i = 0; i < boxes.length; i++) {
+//         var delay = i * 50;
+//         boxes[i].style.animation = `fadeIn 1s ease forwards ${delay}ms`;
+//     }
+// }
 
 applyFadeInAnimation();
