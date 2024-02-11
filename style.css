@@ -44,7 +44,6 @@ h1, p{
     width: 100%;
     margin: auto;
     margin-bottom: 18px;
-    /* animation: fadeIn 0.5s ease forwards; */
 }
 
 .box a {
@@ -70,8 +69,14 @@ h1, p{
 
 .box:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    animation: scale 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s 1 normal forwards;
+    transform: scale(1.03);
+    transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
 }
+.box:not(:hover){
+    transform: scale(1);
+    transition: transform 0.2s cubic-bezier(0, 2, 0.5, 1.5) 0s;
+}
+
 
 .arrow-down { /* arrow */
     position: absolute;
@@ -83,7 +88,6 @@ h1, p{
     border-right: 10px solid transparent;
     border-top: 13px solid white;
     transition: transform 0.3s; 
-    
 }
 
 .rotate {   /* arrow rotation */
@@ -97,19 +101,26 @@ h1, p{
     display: none;
 }
 
-/* for js toggle */
-.show {
+.show_box {
     display: block;
 }
 
+/* for js fadeIn effect
+.fadeIn_animation{
+    animation: fadeIn 0.5s ease forwards;
+}
+.hover_animation{
+    transform: scale(1.03);
+    transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
+}
+.leaveHover_animation{
+    transform: scale(1);
+    transition: transform 0.2s cubic-bezier(0, 2, 0.5, 1.5) 0s;
+} 
+*/
 
 @keyframes fadeIn {
     from { transform: translateY(-80%); }
     to { transform: translateY(0%); }
     0% { opacity: 0; }
-}
-
-@keyframes scale {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.02); }
 }
